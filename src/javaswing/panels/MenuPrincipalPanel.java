@@ -1,6 +1,6 @@
 package javaswing.panels;
 
-import javaswing.Login;
+import javaswing.LoginForm;
 import javaswing.Registo;
 
 
@@ -69,7 +69,7 @@ public class MenuPrincipalPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
   private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
-     Login login = new Login();
+     LoginForm login = new LoginForm();
      login.setVisible(true);
      
      
