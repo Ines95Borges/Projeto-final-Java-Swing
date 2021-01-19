@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class Conexao {
   
   Connection conn;
-  String url = "jdbc:mysql://localhost:3307/javaweb";
+  String url = "jdbc:mysql://localhost:3307/javaweb_pf";
   String user = "root";
   String password = "";
   
