@@ -28,6 +28,7 @@ public class RegistoVendas extends javax.swing.JFrame {
     txt_quantidade = new javax.swing.JTextField();
     jButton1 = new javax.swing.JButton();
     jButton2 = new javax.swing.JButton();
+    btn_historico = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,12 +66,19 @@ public class RegistoVendas extends javax.swing.JFrame {
       }
     });
 
+    btn_historico.setText("Ver histórico de vendas");
+    btn_historico.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btn_historicoActionPerformed(evt);
+      }
+    });
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addContainerGap(43, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -87,7 +95,10 @@ public class RegistoVendas extends javax.swing.JFrame {
             .addGap(35, 35, 35))
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
             .addComponent(jLabel1)
-            .addGap(110, 110, 110))))
+            .addGap(110, 110, 110))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addComponent(btn_historico)
+            .addGap(185, 185, 185))))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,6 +115,8 @@ public class RegistoVendas extends javax.swing.JFrame {
           .addComponent(txt_quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jButton1)
           .addComponent(jButton2))
+        .addGap(18, 18, 18)
+        .addComponent(btn_historico)
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
@@ -132,6 +145,11 @@ public class RegistoVendas extends javax.swing.JFrame {
       Logger.getLogger(RegistoVendas.class.getName()).log(Level.SEVERE, null, ex);
     }
   }//GEN-LAST:event_jButton2ActionPerformed
+
+  private void btn_historicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_historicoActionPerformed
+    HistoricoVendas historicoVendas = new HistoricoVendas();
+    historicoVendas.setVisible(true);
+  }//GEN-LAST:event_btn_historicoActionPerformed
 
   
   
@@ -168,6 +186,7 @@ public class RegistoVendas extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton btn_historico;
   private javax.swing.JButton jButton1;
   private javax.swing.JButton jButton2;
   private javax.swing.JLabel jLabel1;
