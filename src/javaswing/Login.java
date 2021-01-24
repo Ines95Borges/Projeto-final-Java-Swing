@@ -133,8 +133,8 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Login realizado com sucesso!");        
             this.dispose();
             
-            Homepage x = new Homepage();  // Classe criada pelo Hugo
-            x.setVisible(true);
+           // Homepage x = new Homepage();  // Classe criada pelo Hugo
+            //x.setVisible(true);
             
         }
         else{

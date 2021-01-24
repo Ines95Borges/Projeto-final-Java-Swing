@@ -118,6 +118,7 @@ public class Registo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_menu_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menu_principalActionPerformed
+        this.dispose();
         MenuPrincipal voltarMenuPrincipal = new MenuPrincipal();
         voltarMenuPrincipal.setVisible(true);
     }//GEN-LAST:event_bt_menu_principalActionPerformed

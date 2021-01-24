@@ -67,6 +67,7 @@ public class MenuPrincipalPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
   private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+     
      Login login = new Login();
      login.setVisible(true);
      
@@ -84,4 +85,8 @@ public class MenuPrincipalPanel extends javax.swing.JPanel {
     private javax.swing.JButton btn_registar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    private void dispose() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
