@@ -147,6 +147,7 @@ public class RegistoVendas extends javax.swing.JFrame {
   }//GEN-LAST:event_jButton2ActionPerformed
 
   private void btn_historicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_historicoActionPerformed
+    this.dispose();
     HistoricoVendas historicoVendas = new HistoricoVendas();
     historicoVendas.setVisible(true);
   }//GEN-LAST:event_btn_historicoActionPerformed
