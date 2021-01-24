@@ -1,6 +1,8 @@
 
 package javaswing;
 
+import javax.swing.JOptionPane;
+
 
 public class Login extends javax.swing.JFrame {
 
@@ -120,7 +122,24 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void bt_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_entrarActionPerformed
-        // TODO add your handling code here:
+        String utilizador = txt_utilizador.getText(); // lê a informação dada para user
+        String password = txt_password.getText(); //lÊ a informação dada para pwd
+        
+        LoginUtilizador fazLogin = new LoginUtilizador();
+        fazLogin.nome = utilizador;
+        fazLogin.pwd = password;
+        
+        if(fazLogin.fazerLogin()){
+            JOptionPane.showMessageDialog(null, "Login realizado com sucesso!");        
+            this.dispose();
+            
+            Homepage x = new Homepage();  // Classe criada pelo Hugo
+            x.setVisible(true);
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Utilizador ou password inválidos");
+        }
     }//GEN-LAST:event_bt_entrarActionPerformed
 
     private void bt_menu_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menu_principalActionPerformed

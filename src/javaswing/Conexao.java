@@ -1,3 +1,5 @@
+package javaswing;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -5,7 +7,7 @@ import java.sql.DriverManager;
 public class Conexao {
   
   Connection conn;
-  String url = "jdbc:mysql://localhost:3306/javaweb";
+  String url = "jdbc:mysql://localhost:3306/projetofinaljavaweb";
   String user = "root";
   String password = "";
   

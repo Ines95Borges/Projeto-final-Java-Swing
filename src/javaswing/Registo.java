@@ -1,6 +1,8 @@
 
 package javaswing;
 
+import javax.swing.JOptionPane;
+
 
 public class Registo extends javax.swing.JFrame {
 
@@ -68,6 +70,17 @@ public class Registo extends javax.swing.JFrame {
                 .addGap(124, 124, 124)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2))))
+                        .addGap(0, 150, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(bt_menu_principal)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -79,18 +92,7 @@ public class Registo extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(bt_registar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(119, 119, 119))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))))
-                        .addGap(0, 150, Short.MAX_VALUE))))
+                                .addGap(47, 47, 47))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +123,23 @@ public class Registo extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 
     private void bt_registarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_registarActionPerformed
-        // TODO add your handling code here:
+        if(txt_utilizador.getText().length()>0 && txt_password.getText().length()>0){
+            LoginUtilizador registaUtilizador = new LoginUtilizador();
+            
+            registaUtilizador.nome = txt_utilizador.getText();
+            registaUtilizador.pwd = txt_password.getText();
+            
+            if(registaUtilizador.isUtilizadorRegistado()) // verifica se o utilizador já é registado na bd
+            {
+                JOptionPane.showMessageDialog(null, "Utilizador já registado!");
+            }  
+            else{
+                registaUtilizador.registarUtilizador();
+            }
+            
+        }else {
+            JOptionPane.showMessageDialog(null, "Deve informar um utilizador e password");
+        }
     }//GEN-LAST:event_bt_registarActionPerformed
 
     private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
