@@ -91,11 +91,13 @@ public class Compras2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        this.dispose();
         NovaCompra2 novacompra = new NovaCompra2();
         novacompra.setVisible(true);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+       this.dispose();
        HistoricoCompras2 historico = new HistoricoCompras2();
        historico.setVisible(true);
     }//GEN-LAST:event_jToggleButton2ActionPerformed
