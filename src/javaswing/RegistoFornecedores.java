@@ -5,11 +5,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class RegistoVendas extends javax.swing.JFrame {
+public class RegistoFornecedores extends javax.swing.JFrame {
   
   Vendas vendas = new Vendas();
 
-  public RegistoVendas() {
+  public RegistoFornecedores() {
     initComponents();
     vendas.carregaProdutos(tbl_produtos);
     vendas.carregaClientes(tbl_clientes);
@@ -148,7 +148,7 @@ public class RegistoVendas extends javax.swing.JFrame {
       ps.setInt(3, quantidade_inteiro);
       ps.executeUpdate();
     } catch (SQLException ex) {
-      Logger.getLogger(RegistoVendas.class.getName()).log(Level.SEVERE, null, ex);
+      Logger.getLogger(RegistoFornecedores.class.getName()).log(Level.SEVERE, null, ex);
     }
   }//GEN-LAST:event_jButton2ActionPerformed
 
