@@ -5,10 +5,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class RegistoFornecedores extends javax.swing.JFrame {
+public class RegistoProdutos extends javax.swing.JFrame {
   
 
-  public RegistoFornecedores() {
+  public RegistoProdutos() {
     initComponents();
   }
 
@@ -108,7 +108,7 @@ public class RegistoFornecedores extends javax.swing.JFrame {
       ps.setInt(2, nif);
       ps.executeUpdate();
     } catch (SQLException ex) {
-      Logger.getLogger(RegistoFornecedores.class.getName()).log(Level.SEVERE, null, ex);
+      Logger.getLogger(RegistoProdutos.class.getName()).log(Level.SEVERE, null, ex);
     }
     
     this.dispose();
