@@ -121,7 +121,7 @@ public class Registo extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 
     private void bt_registarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_registarActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_bt_registarActionPerformed
 
     private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
