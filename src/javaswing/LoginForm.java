@@ -122,12 +122,15 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void bt_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_entrarActionPerformed
-
+        this.dispose();
+        Homepage homepage = new Homepage();
+        homepage.setVisible(true);
     }//GEN-LAST:event_bt_entrarActionPerformed
 
     private void bt_menu_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menu_principalActionPerformed
+        this.dispose();
         MenuPrincipal voltarMenuPrincipal = new MenuPrincipal();
-       voltarMenuPrincipal.setVisible(true);
+        voltarMenuPrincipal.setVisible(true);
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 
     

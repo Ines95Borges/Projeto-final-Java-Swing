@@ -98,8 +98,8 @@ public class Stock extends javax.swing.JFrame {
 
     private void btn_RegProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegProdActionPerformed
         this.dispose();
-        Homepage homepage = new Homepage();
-        homepage.setVisible(true);
+        RegistoProdutos regProd = new RegistoProdutos();
+        regProd.setVisible(true);
     }//GEN-LAST:event_btn_RegProdActionPerformed
 
     public void run() {
