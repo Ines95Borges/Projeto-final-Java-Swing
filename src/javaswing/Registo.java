@@ -1,6 +1,8 @@
 
 package javaswing;
 
+import javax.swing.JOptionPane;
+
 
 public class Registo extends javax.swing.JFrame {
 
@@ -116,12 +118,29 @@ public class Registo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_menu_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menu_principalActionPerformed
-        MenuPrincipal voltarMenuPrincipal = new MenuPrincipal();
+        MenuInicial voltarMenuPrincipal = new MenuInicial();
         voltarMenuPrincipal.setVisible(true);
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 
     private void bt_registarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_registarActionPerformed
+      if (txt_utilizador.getText().length() > 0 && txt_password.getText().length() > 0) {
+        LoginUtilizador registaUtilizador = new LoginUtilizador();
 
+        registaUtilizador.nome = txt_utilizador.getText();
+        registaUtilizador.pwd = txt_password.getText();
+
+        if (registaUtilizador.isUtilizadorRegistado()) // verifica se o utilizador já é registado na bd
+        {
+          JOptionPane.showMessageDialog(null, "Utilizador já registado!");
+        }
+        else{
+          registaUtilizador.registarUtilizador();
+          this.dispose();
+        }
+
+      }else{
+        JOptionPane.showMessageDialog(null, "Deve informar um utilizador e password");
+      }
     }//GEN-LAST:event_bt_registarActionPerformed
 
     private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed

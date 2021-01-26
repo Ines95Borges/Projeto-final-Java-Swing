@@ -1,6 +1,8 @@
 
 package javaswing;
 
+import javax.swing.JOptionPane;
+
 
 public class LoginForm extends javax.swing.JFrame {
 
@@ -122,14 +124,28 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void bt_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_entrarActionPerformed
+      // Código do botão Entrar - Login: 
+      String utilizador = txt_utilizador.getText(); // lê a informação dada para user
+      String password = txt_password.getText(); //lÊ a informação dada para pwd
+
+      LoginUtilizador fazLogin = new LoginUtilizador();
+      fazLogin.nome = utilizador;
+      fazLogin.pwd = password;
+
+      if(fazLogin.isUtilizadorRegistado()){
         this.dispose();
-        Homepage homepage = new Homepage();
-        homepage.setVisible(true);
+
+        MenuPrincipal x = new MenuPrincipal(); // Classe criada pelo Hugo
+        x.setVisible(true);
+      }
+      else{
+        JOptionPane.showMessageDialog(null, "Utilizador ou password inválidos");
+      }
     }//GEN-LAST:event_bt_entrarActionPerformed
 
     private void bt_menu_principalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menu_principalActionPerformed
         this.dispose();
-        MenuPrincipal voltarMenuPrincipal = new MenuPrincipal();
+        MenuInicial voltarMenuPrincipal = new MenuInicial();
         voltarMenuPrincipal.setVisible(true);
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 

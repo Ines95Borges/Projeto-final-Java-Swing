@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class RegistoFornecedores extends javax.swing.JFrame {
   
@@ -103,7 +104,7 @@ public class RegistoFornecedores extends javax.swing.JFrame {
     Conexao conn = new Conexao();
     conn.abreConexao();
     try {
-      PreparedStatement ps = conn.conn.prepareStatement("INSERT INTO fornecedores(Fornecedor_ID,Nome, NIF) VALUES (NULL, ?, ?)");
+      PreparedStatement ps = conn.conn.prepareStatement("INSERT INTO fornecedores(Fornecedor_ID, Nome, NIF) VALUES (NULL, ?, ?)");
       ps.setString(1, nome);
       ps.setInt(2, nif);
       ps.executeUpdate();
@@ -112,13 +113,15 @@ public class RegistoFornecedores extends javax.swing.JFrame {
     }
     
     this.dispose();
-    Homepage homepage = new Homepage();
+    MenuPrincipal homepage = new MenuPrincipal();
     homepage.setVisible(true);
+    // TODO: implementar verificações
+    JOptionPane.showMessageDialog(null, "Registado com sucesso.");
   }//GEN-LAST:event_btn_registarActionPerformed
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
       this.dispose();
-      Homepage homepage = new Homepage();
+      MenuPrincipal homepage = new MenuPrincipal();
       homepage.setVisible(true);
     }//GEN-LAST:event_btn_voltarActionPerformed
 

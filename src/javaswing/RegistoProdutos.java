@@ -142,7 +142,7 @@ public class RegistoProdutos extends javax.swing.JFrame {
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
       this.dispose();
-      Homepage homepage = new Homepage();
+      MenuPrincipal homepage = new MenuPrincipal();
       homepage.setVisible(true);
     }//GEN-LAST:event_btn_voltarActionPerformed
 
