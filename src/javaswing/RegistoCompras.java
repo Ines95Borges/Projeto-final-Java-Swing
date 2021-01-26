@@ -1,5 +1,6 @@
 package javaswing;
 
+import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
@@ -11,6 +12,7 @@ public class RegistoCompras extends javax.swing.JFrame {
     initComponents();
     setResizable(false); // impede a mudanca de tamanho
     setLocationRelativeTo(null); //posiciona no centro do ecra
+    this.getContentPane().setBackground(Color.BLACK);
 
     DefaultTableModel model;
 

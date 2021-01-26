@@ -1,6 +1,8 @@
 
 package javaswing;
 
+import java.awt.Color;
+
 
 public class Compras extends javax.swing.JFrame {
 
@@ -9,6 +11,7 @@ public class Compras extends javax.swing.JFrame {
         initComponents();
         setResizable(false); // impede a mudanca de tamanho
         setLocationRelativeTo(null); //posiciona no centro do ecra
+        this.getContentPane().setBackground(Color.BLACK);
     }
 
     @SuppressWarnings("unchecked")
@@ -23,10 +26,17 @@ public class Compras extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+    jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+    jLabel2.setForeground(new java.awt.Color(255, 255, 255));
     jLabel2.setText("Escolha uma opção para continuar:");
 
+    jLabel1.setFont(new java.awt.Font("Consolas", 1, 36)); // NOI18N
+    jLabel1.setForeground(new java.awt.Color(0, 255, 255));
     jLabel1.setText("Compras");
 
+    jToggleButton1.setBackground(new java.awt.Color(0, 0, 0));
+    jToggleButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
     jToggleButton1.setText("Registar nova compra");
     jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -34,6 +44,9 @@ public class Compras extends javax.swing.JFrame {
       }
     });
 
+    jToggleButton2.setBackground(new java.awt.Color(0, 0, 0));
+    jToggleButton2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
     jToggleButton2.setText("Mostrar histórico de compra");
     jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +54,9 @@ public class Compras extends javax.swing.JFrame {
       }
     });
 
+    jToggleButton3.setBackground(new java.awt.Color(0, 0, 0));
+    jToggleButton3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
     jToggleButton3.setText("Voltar ");
     jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,36 +71,37 @@ public class Compras extends javax.swing.JFrame {
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
         .addGap(0, 0, Short.MAX_VALUE)
         .addComponent(jToggleButton3)
-        .addGap(24, 24, 24))
+        .addGap(49, 49, 49))
       .addGroup(layout.createSequentialGroup()
+        .addGap(73, 73, 73)
+        .addComponent(jToggleButton2)
+        .addContainerGap(55, Short.MAX_VALUE))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(layout.createSequentialGroup()
-            .addGap(169, 169, 169)
-            .addComponent(jLabel1))
-          .addGroup(layout.createSequentialGroup()
-            .addGap(114, 114, 114)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-              .addComponent(jLabel2)
-              .addComponent(jToggleButton2, javax.swing.GroupLayout.Alignment.LEADING)
-              .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jToggleButton1)))))
-        .addContainerGap(118, Short.MAX_VALUE))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2)
+            .addGroup(layout.createSequentialGroup()
+              .addComponent(jToggleButton1)
+              .addGap(85, 85, 85)))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addComponent(jLabel1)
+            .addGap(139, 139, 139))))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(27, 27, 27)
+        .addGap(35, 35, 35)
         .addComponent(jLabel1)
-        .addGap(26, 26, 26)
+        .addGap(18, 18, 18)
         .addComponent(jLabel2)
-        .addGap(34, 34, 34)
+        .addGap(18, 18, 18)
         .addComponent(jToggleButton1)
         .addGap(18, 18, 18)
         .addComponent(jToggleButton2)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+        .addGap(34, 34, 34)
         .addComponent(jToggleButton3)
-        .addGap(37, 37, 37))
+        .addContainerGap(28, Short.MAX_VALUE))
     );
 
     pack();

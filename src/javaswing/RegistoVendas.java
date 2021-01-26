@@ -1,5 +1,6 @@
 package javaswing;
 
+import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -14,6 +15,8 @@ public class RegistoVendas extends javax.swing.JFrame {
     initComponents();
     vendas.carregaProdutos(tbl_produtos);
     vendas.carregaClientes(tbl_clientes);
+    setLocationRelativeTo(null);
+    this.getContentPane().setBackground(Color.BLACK);
   }
 
   @SuppressWarnings("unchecked")

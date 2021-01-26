@@ -1,6 +1,7 @@
 
 package javaswing;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 
@@ -8,7 +9,9 @@ public class LoginForm extends javax.swing.JFrame {
 
     
     public LoginForm() {
-        initComponents();
+      initComponents();
+      setLocationRelativeTo(null);
+      this.getContentPane().setBackground(Color.BLACK);
     }
 
     
@@ -137,6 +140,7 @@ public class LoginForm extends javax.swing.JFrame {
 
         MenuPrincipal x = new MenuPrincipal(); // Classe criada pelo Hugo
         x.setVisible(true);
+        
       }
       else{
         JOptionPane.showMessageDialog(null, "Utilizador ou password inválidos");

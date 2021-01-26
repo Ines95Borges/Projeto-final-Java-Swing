@@ -1,5 +1,6 @@
 package javaswing;
 
+import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
@@ -10,6 +11,8 @@ public class Stock extends javax.swing.JFrame {
 
     public Stock() {
         initComponents();
+        setLocationRelativeTo(null);
+    this.getContentPane().setBackground(Color.BLACK);
     }
 
     
