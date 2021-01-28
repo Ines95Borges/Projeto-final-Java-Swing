@@ -76,8 +76,13 @@ public class RegistoCompras extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jLabel1.setText("Vamos registar uma nova compra:");
+    jLabel1.setFont(new java.awt.Font("Consolas", 1, 36)); // NOI18N
+    jLabel1.setForeground(new java.awt.Color(0, 255, 255));
+    jLabel1.setText("Registar uma nova compra:");
 
+    jButton1.setBackground(new java.awt.Color(0, 0, 0));
+    jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jButton1.setForeground(new java.awt.Color(255, 255, 255));
     jButton1.setText("Confirmar registo");
     jButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +90,9 @@ public class RegistoCompras extends javax.swing.JFrame {
       }
     });
 
+    jButton2.setBackground(new java.awt.Color(0, 0, 0));
+    jButton2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jButton2.setForeground(new java.awt.Color(255, 255, 255));
     jButton2.setText("Voltar");
     jButton2.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,8 +118,12 @@ public class RegistoCompras extends javax.swing.JFrame {
     });
     jScrollPane1.setViewportView(tableFornecedor);
 
+    jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    jLabel7.setForeground(new java.awt.Color(255, 255, 255));
     jLabel7.setText("1. Selecione um produto da tabela:");
 
+    jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    jLabel8.setForeground(new java.awt.Color(255, 255, 255));
     jLabel8.setText("*Quantidade = stock atual");
 
     tableProd.setModel(new javax.swing.table.DefaultTableModel(
@@ -132,8 +144,12 @@ public class RegistoCompras extends javax.swing.JFrame {
     });
     jScrollPane2.setViewportView(tableProd);
 
+    jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    jLabel2.setForeground(new java.awt.Color(255, 255, 255));
     jLabel2.setText("2. Selecione um fornecedor da tabela:");
 
+    jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    jLabel3.setForeground(new java.awt.Color(255, 255, 255));
     jLabel3.setText("3. Informe a quantidade desejada:");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,42 +157,37 @@ public class RegistoCompras extends javax.swing.JFrame {
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
+        .addContainerGap(33, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(layout.createSequentialGroup()
-            .addGap(168, 168, 168)
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton2)
             .addComponent(jLabel1))
+          .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
+        .addContainerGap(34, Short.MAX_VALUE))
+      .addGroup(layout.createSequentialGroup()
+        .addGap(62, 62, 62)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel7)
+          .addComponent(jLabel8)
+          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabel2)
           .addGroup(layout.createSequentialGroup()
-            .addGap(54, 54, 54)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel7)
-              .addComponent(jLabel8)
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel2)
-              .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jtxt_qtde, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-        .addContainerGap(132, Short.MAX_VALUE))
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addGap(0, 0, Short.MAX_VALUE)
-        .addComponent(jButton1)
-        .addGap(18, 18, 18)
-        .addComponent(jButton2)
-        .addGap(38, 38, 38))
-      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
-          .addGap(53, 53, 53)
-          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addContainerGap(133, Short.MAX_VALUE)))
+            .addComponent(jLabel3)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(jtxt_qtde, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addComponent(jLabel1)
-        .addGap(42, 42, 42)
+        .addGap(18, 18, 18)
         .addComponent(jLabel7)
-        .addGap(101, 101, 101)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(2, 2, 2)
         .addComponent(jLabel8)
         .addGap(50, 50, 50)
         .addComponent(jLabel2)
@@ -186,16 +197,11 @@ public class RegistoCompras extends javax.swing.JFrame {
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jtxt_qtde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel3))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jButton2)
-          .addComponent(jButton1))
-        .addGap(23, 23, 23))
-      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
-          .addGap(86, 86, 86)
-          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addContainerGap(324, Short.MAX_VALUE)))
+          .addComponent(jButton1)
+          .addComponent(jButton2))
+        .addGap(26, 26, 26))
     );
 
     pack();

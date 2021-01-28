@@ -36,8 +36,9 @@ public class RegistoVendas extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jLabel1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 24)); // NOI18N
-    jLabel1.setText("Registar uma venda");
+    jLabel1.setFont(new java.awt.Font("Consolas", 1, 36)); // NOI18N
+    jLabel1.setForeground(new java.awt.Color(0, 255, 255));
+    jLabel1.setText("Registar venda");
 
     tbl_produtos.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
@@ -59,8 +60,13 @@ public class RegistoVendas extends javax.swing.JFrame {
     ));
     jScrollPane2.setViewportView(tbl_clientes);
 
+    jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    jLabel2.setForeground(new java.awt.Color(255, 255, 255));
     jLabel2.setText("Quantidade:");
 
+    jButton1.setBackground(new java.awt.Color(0, 0, 0));
+    jButton1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    jButton1.setForeground(new java.awt.Color(255, 255, 255));
     jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon-voltar.jpg"))); // NOI18N
     jButton1.setText("Voltar");
     jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +75,9 @@ public class RegistoVendas extends javax.swing.JFrame {
       }
     });
 
+    btn_registar.setBackground(new java.awt.Color(0, 0, 0));
+    btn_registar.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    btn_registar.setForeground(new java.awt.Color(255, 255, 255));
     btn_registar.setText("Registar Venda");
     btn_registar.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +85,9 @@ public class RegistoVendas extends javax.swing.JFrame {
       }
     });
 
+    btn_historico.setBackground(new java.awt.Color(0, 0, 0));
+    btn_historico.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+    btn_historico.setForeground(new java.awt.Color(255, 255, 255));
     btn_historico.setText("Ver histórico de vendas");
     btn_historico.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,45 +101,44 @@ public class RegistoVendas extends javax.swing.JFrame {
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(jScrollPane1)
+          .addComponent(jScrollPane2)
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(txt_quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(btn_registar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addContainerGap())
+            .addComponent(jLabel2)
+            .addGap(18, 18, 18)
+            .addComponent(txt_quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(114, 114, 114)
+            .addComponent(btn_registar))
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addComponent(jLabel1)
-            .addGap(110, 110, 110))
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addComponent(btn_historico)
-            .addGap(158, 158, 158))))
+            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_historico)))
+        .addContainerGap())
+      .addGroup(layout.createSequentialGroup()
+        .addGap(111, 111, 111)
+        .addComponent(jLabel1)
+        .addGap(0, 0, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(28, 28, 28)
+        .addGap(27, 27, 27)
         .addComponent(jLabel1)
-        .addGap(40, 40, 40)
+        .addGap(41, 41, 41)
         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(39, 39, 39)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel2)
-          .addComponent(txt_quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jButton1)
-          .addComponent(btn_registar))
         .addGap(18, 18, 18)
-        .addComponent(btn_historico)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(btn_registar, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+          .addComponent(jLabel2)
+          .addComponent(txt_quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btn_historico, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(21, 21, 21))
     );
 
     pack();

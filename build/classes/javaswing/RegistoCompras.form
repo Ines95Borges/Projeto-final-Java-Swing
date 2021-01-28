@@ -23,42 +23,32 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace pref="33" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jButton1" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" min="-2" pref="438" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" alignment="0" min="-2" pref="438" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jtxt_qtde" min="-2" pref="107" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jtxt_qtde" min="-2" pref="107" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="jScrollPane2" alignment="0" min="-2" pref="438" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="132" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="438" max="-2" attributes="0"/>
-                  <EmptySpace pref="133" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -67,9 +57,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="93" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -80,19 +72,12 @@
                   <Component id="jtxt_qtde" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="43" max="32767" attributes="0"/>
+              <EmptySpace pref="55" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-          </Group>
-          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="93" max="-2" attributes="0"/>
-                  <EmptySpace pref="324" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -100,11 +85,26 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Vamos registar uma nova compra:"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Consolas" size="36" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Registar uma nova compra:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Confirmar registo"/>
       </Properties>
       <Events>
@@ -113,6 +113,15 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Voltar"/>
       </Properties>
       <Events>
@@ -157,11 +166,23 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="1. Selecione um produto da tabela:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="*Quantidade = stock atual"/>
       </Properties>
     </Component>
@@ -215,6 +236,12 @@
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="2. Selecione um fornecedor da tabela:"/>
       </Properties>
     </Component>
@@ -222,6 +249,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="14" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="3. Informe a quantidade desejada:"/>
       </Properties>
     </Component>

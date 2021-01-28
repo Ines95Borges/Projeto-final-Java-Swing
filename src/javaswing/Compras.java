@@ -57,6 +57,7 @@ public class Compras extends javax.swing.JFrame {
     jToggleButton3.setBackground(new java.awt.Color(0, 0, 0));
     jToggleButton3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
     jToggleButton3.setForeground(new java.awt.Color(255, 255, 255));
+    jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icon-voltar.jpg"))); // NOI18N
     jToggleButton3.setText("Voltar ");
     jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,24 +70,22 @@ public class Compras extends javax.swing.JFrame {
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addGap(0, 0, Short.MAX_VALUE)
-        .addComponent(jToggleButton3)
-        .addGap(49, 49, 49))
-      .addGroup(layout.createSequentialGroup()
-        .addGap(73, 73, 73)
-        .addComponent(jToggleButton2)
-        .addContainerGap(55, Short.MAX_VALUE))
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2)
-            .addGroup(layout.createSequentialGroup()
-              .addComponent(jToggleButton1)
-              .addGap(85, 85, 85)))
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel2)
+              .addComponent(jToggleButton1))
+            .addGap(76, 76, 76))
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
             .addComponent(jLabel1)
             .addGap(139, 139, 139))))
+      .addGroup(layout.createSequentialGroup()
+        .addGap(73, 73, 73)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jToggleButton3)
+          .addComponent(jToggleButton2))
+        .addContainerGap(55, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,9 +98,9 @@ public class Compras extends javax.swing.JFrame {
         .addComponent(jToggleButton1)
         .addGap(18, 18, 18)
         .addComponent(jToggleButton2)
-        .addGap(34, 34, 34)
+        .addGap(29, 29, 29)
         .addComponent(jToggleButton3)
-        .addContainerGap(28, Short.MAX_VALUE))
+        .addContainerGap(33, Short.MAX_VALUE))
     );
 
     pack();

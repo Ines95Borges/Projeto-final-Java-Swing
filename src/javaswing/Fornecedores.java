@@ -29,7 +29,7 @@ public class Fornecedores extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jLabel1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
+    jLabel1.setFont(new java.awt.Font("Consolas", 1, 36)); // NOI18N
     jLabel1.setForeground(new java.awt.Color(0, 255, 255));
     jLabel1.setText("Fornecedores");
 
@@ -73,13 +73,13 @@ public class Fornecedores extends javax.swing.JFrame {
           .addGroup(layout.createSequentialGroup()
             .addGap(25, 25, 25)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addGroup(layout.createSequentialGroup()
-                .addComponent(btn_reg_forn, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1))
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(btn_reg_forn, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
           .addGroup(layout.createSequentialGroup()
-            .addGap(235, 235, 235)
+            .addGap(193, 193, 193)
             .addComponent(jLabel1)))
         .addContainerGap(24, Short.MAX_VALUE))
     );
@@ -90,11 +90,11 @@ public class Fornecedores extends javax.swing.JFrame {
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(35, 35, 35)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jButton1)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
           .addComponent(btn_reg_forn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addContainerGap(24, Short.MAX_VALUE))
     );
 
     pack();

@@ -24,17 +24,15 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-              <Component id="bt_menu_principal" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="bt_entrar" min="-2" pref="80" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="bt_menu_principal" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
@@ -44,35 +42,36 @@
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txt_utilizador" max="32767" attributes="0"/>
-                          <Component id="txt_password" pref="199" max="32767" attributes="0"/>
+                          <Component id="txt_utilizador" pref="199" max="32767" attributes="0"/>
+                          <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_password" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <Component id="bt_entrar" min="-2" pref="102" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txt_utilizador" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_utilizador" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_password" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="58" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bt_menu_principal" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="bt_entrar" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
@@ -86,18 +85,21 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Viner Hand ITC" size="36" style="1"/>
+          <Font name="Consolas" size="36" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="ff" green="ff" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Fa&#xe7;a o login:"/>
+        <Property name="text" type="java.lang.String" value="Login do utilizador:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Utilizador:"/>
       </Properties>
@@ -107,6 +109,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
@@ -115,13 +120,17 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_utilizadorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_password">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_passwordActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="bt_menu_principal">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Menu Principal"/>
       </Properties>
       <Events>
@@ -130,10 +139,32 @@
     </Component>
     <Component class="javax.swing.JButton" name="bt_entrar">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Entrar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_entrarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txt_password">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mostrar palavra-passe"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
