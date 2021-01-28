@@ -27,7 +27,7 @@ public class LoginForm extends javax.swing.JFrame {
     bt_menu_principal = new javax.swing.JButton();
     bt_entrar = new javax.swing.JButton();
     txt_password = new javax.swing.JPasswordField();
-    jCheckBox1 = new javax.swing.JCheckBox();
+    check_password = new javax.swing.JCheckBox();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,12 +69,13 @@ public class LoginForm extends javax.swing.JFrame {
       }
     });
 
-    txt_password.setText("jPasswordField1");
-
-    jCheckBox1.setText("Mostrar palavra-passe");
-    jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+    check_password.setBackground(new java.awt.Color(0, 0, 0));
+    check_password.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    check_password.setForeground(new java.awt.Color(255, 255, 255));
+    check_password.setText("Mostrar palavra-passe");
+    check_password.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox1ActionPerformed(evt);
+        check_passwordActionPerformed(evt);
       }
     });
 
@@ -99,7 +100,7 @@ public class LoginForm extends javax.swing.JFrame {
             .addGap(30, 30, 30)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(txt_utilizador, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-              .addComponent(jCheckBox1)
+              .addComponent(check_password)
               .addComponent(txt_password))))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
         .addComponent(bt_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -119,8 +120,8 @@ public class LoginForm extends javax.swing.JFrame {
           .addComponent(jLabel3)
           .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(jCheckBox1)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+        .addComponent(check_password)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(bt_menu_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(bt_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -162,9 +163,13 @@ public class LoginForm extends javax.swing.JFrame {
         voltarMenuPrincipal.setVisible(true);
     }//GEN-LAST:event_bt_menu_principalActionPerformed
 
-  private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jCheckBox1ActionPerformed
+  private void check_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_passwordActionPerformed
+    if(this.check_password.isSelected()){
+      this.txt_password.setEchoChar((char)0);
+    }else{
+      this.txt_password.setEchoChar('*');
+    }
+  }//GEN-LAST:event_check_passwordActionPerformed
 
     
     public static void main(String args[]) {
@@ -204,7 +209,7 @@ public class LoginForm extends javax.swing.JFrame {
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton bt_entrar;
   private javax.swing.JButton bt_menu_principal;
-  private javax.swing.JCheckBox jCheckBox1;
+  private javax.swing.JCheckBox check_password;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;

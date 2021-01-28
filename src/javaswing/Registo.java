@@ -23,9 +23,10 @@ public class Registo extends javax.swing.JFrame {
     jLabel2 = new javax.swing.JLabel();
     jLabel3 = new javax.swing.JLabel();
     txt_utilizador = new javax.swing.JTextField();
-    txt_password = new javax.swing.JTextField();
     bt_menu_principal = new javax.swing.JButton();
     bt_registar = new javax.swing.JButton();
+    txt_password = new javax.swing.JPasswordField();
+    check_password = new javax.swing.JCheckBox();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,12 +48,6 @@ public class Registo extends javax.swing.JFrame {
       }
     });
 
-    txt_password.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txt_passwordActionPerformed(evt);
-      }
-    });
-
     bt_menu_principal.setBackground(new java.awt.Color(0, 0, 0));
     bt_menu_principal.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
     bt_menu_principal.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +65,22 @@ public class Registo extends javax.swing.JFrame {
     bt_registar.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         bt_registarActionPerformed(evt);
+      }
+    });
+
+    txt_password.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txt_passwordActionPerformed(evt);
+      }
+    });
+
+    check_password.setBackground(new java.awt.Color(0, 0, 0));
+    check_password.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+    check_password.setForeground(new java.awt.Color(255, 255, 255));
+    check_password.setText("Mostrar palavra-passe");
+    check_password.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        check_passwordActionPerformed(evt);
       }
     });
 
@@ -95,8 +106,10 @@ public class Registo extends javax.swing.JFrame {
                   .addComponent(jLabel3))
                 .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(txt_utilizador, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                  .addComponent(check_password)
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_utilizador, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                    .addComponent(txt_password)))))
             .addGap(0, 0, Short.MAX_VALUE))))
     );
     layout.setVerticalGroup(
@@ -110,9 +123,11 @@ public class Registo extends javax.swing.JFrame {
           .addComponent(jLabel2))
         .addGap(65, 65, 65)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel3))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+          .addComponent(jLabel3)
+          .addComponent(txt_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(check_password)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(bt_menu_principal)
           .addComponent(bt_registar))
@@ -150,13 +165,21 @@ public class Registo extends javax.swing.JFrame {
       }
     }//GEN-LAST:event_bt_registarActionPerformed
 
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwordActionPerformed
-
     private void txt_utilizadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_utilizadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_utilizadorActionPerformed
+
+  private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_txt_passwordActionPerformed
+
+  private void check_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_passwordActionPerformed
+    if(this.check_password.isSelected()){
+      this.txt_password.setEchoChar((char)0);
+    }else{
+      this.txt_password.setEchoChar('*');
+    }
+  }//GEN-LAST:event_check_passwordActionPerformed
 
    
     public static void main(String args[]) {
@@ -171,10 +194,11 @@ public class Registo extends javax.swing.JFrame {
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton bt_menu_principal;
   private javax.swing.JButton bt_registar;
+  private javax.swing.JCheckBox check_password;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;
-  private javax.swing.JTextField txt_password;
+  private javax.swing.JPasswordField txt_password;
   private javax.swing.JTextField txt_utilizador;
   // End of variables declaration//GEN-END:variables
 }
