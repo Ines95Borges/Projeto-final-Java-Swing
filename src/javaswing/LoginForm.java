@@ -86,7 +86,7 @@ public class LoginForm extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addGap(137, 137, 137)
         .addComponent(jLabel1)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addContainerGap(148, Short.MAX_VALUE))
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
@@ -102,7 +102,7 @@ public class LoginForm extends javax.swing.JFrame {
               .addComponent(txt_utilizador, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
               .addComponent(check_password)
               .addComponent(txt_password))))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addComponent(bt_entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(114, 114, 114))
     );
