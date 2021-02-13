@@ -144,14 +144,15 @@ public class LoginForm extends javax.swing.JFrame {
       LoginUtilizador fazLogin = new LoginUtilizador();
       fazLogin.nome = utilizador;
       fazLogin.pwd = password;
-
+     
       if(fazLogin.fazerLogin()){
-          
-          this.dispose();
-        
-        MenuPrincipal x = new MenuPrincipal(); // Classe criada pelo Hugo
-        x.setVisible(true);
-        
+            this.dispose();
+            MenuPrincipal x = new MenuPrincipal(); // Classe criada pelo Hugo
+            x.setVisible(true);   
+      }
+      else if (fazLogin.isUtilizadorRegistado()) {
+    
+          JOptionPane.showMessageDialog(null, "Utilizador registado mas não tem acesso ao sistema");
       }
       else{
         JOptionPane.showMessageDialog(null, "Utilizador ou password inválidos");

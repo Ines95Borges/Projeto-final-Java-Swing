@@ -1,7 +1,9 @@
 package javaswing;
 
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import javaswing.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,6 +14,10 @@ public class LoginUtilizador {
     
     public String nome;
     public String pwd;
+    public boolean acessaSistema;
+    public boolean acessaSite;
+    
+    
     Conexao objCon = new Conexao();
     
     public boolean isUtilizadorRegistado(){
@@ -49,27 +55,10 @@ public class LoginUtilizador {
                     + "where nome=? and pwd=? "
                     + "and utilizador.id = privilegioutilizador.idUtilizador "
                     + "and privilegioutilizador.idPrivilegio = 2";
-            
-            /*
-            "select *"
-                    + "from utilizador, privilegioutilizador"
-                    + "where nome=? and pwd=?"
-                    + "and utilizador.id = privilegioutilizador.idUtilizador"
-                    + "and privilegioutilizador.idPrivilegio = 2";
-*/
+           
             PreparedStatement ps = objCon.conn.prepareStatement(sql);
             
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte messageDigest[] = md.digest(pwd.getBytes("UTF-8"));
-            
-            StringBuilder sb = new StringBuilder();
-            
-            for(byte b : messageDigest){
-            
-                   sb.append(String.format("02X", 0xFF & b));
-            }
-            
-            String senhaHex = sb.toString();
+            String senhaHex = getEncryptedPassword();
             
             ps.setString(1, nome);
             ps.setString(2, senhaHex);
@@ -79,6 +68,7 @@ public class LoginUtilizador {
             //ps.setString(2, pwd);
             ResultSet rs = ps.executeQuery();
             statusLogin = rs.next();
+            
         }
         catch(Exception e){
         }
@@ -99,35 +89,45 @@ public class LoginUtilizador {
     
         try{
             objCon.abreConexao();
+            String sql = "insert into utilizador (nome, pwd) values(?,?)";
+                    
+            PreparedStatement statement = objCon.conn.prepareStatement(sql);
             
-
-            PreparedStatement ps = objCon.conn.prepareStatement("insert into utilizador (nome, pwd) values(?,?)");
-             // query para as seguintes condições:
-             
-             // conceder privilegio ao utilizador de acesso ao site:
-             //(insert into privilegioutilizador(idUtilizador, idPrivilegio) values(?, 1));
-             
-             //conceder privilegio ao utilizador de acesso ao sistema
-            //(insert into privilegioutilizador(idUtilizador, idPRivilegio) values(?, 2));
+            statement.setString(1, nome);
+            statement.setString(2, getEncryptedPassword());
             
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte messageDigest[] = md.digest(pwd.getBytes("UTF-8"));
+            int i = statement.executeUpdate(); //regista qualquer ação, tipo alterações na tabela. O método executa a instrução sql recebida
             
-            StringBuilder sb = new StringBuilder();
+            if(i>0)
+            {
+                sql = "select id from utilizador where nome = ? and pwd = ?";
+                statement = objCon.conn.prepareStatement(sql);
             
-            for(byte b : messageDigest){
-            
-                   sb.append(String.format("02X", 0xFF & b));
-            }
-            
-            String senhaHex = sb.toString();
-            
-            ps.setString(1, nome);
-            ps.setString(2, senhaHex);
-            
-            int i = ps.executeUpdate(); //regista qualquer ação, tipo alterações na tabela. O método executa a instrução sql recebida
-            if(i>0)// E informará o número de linhas que foram alteradas na tabela com a atualização. Se não houver atualização, retorna 0, se houver, retorna o numero de linhas alteradas com a inserção de um novo dado
+                statement.setString(1, nome);
+                statement.setString(2, getEncryptedPassword());
+                
+                ResultSet result = statement.executeQuery();
+                result.next();
+                int idUtilizador = result.getInt("id");
+                
+                if(acessaSite == true) {
+                    sql = "insert into privilegioutilizador (idUtilizador, idPrivilegio) values (?, 1)";
+                    statement = objCon.conn.prepareStatement(sql);
+                    statement.setInt(1, idUtilizador);
+                    statement.executeUpdate();
+                }
+                
+                if (acessaSistema == true) {
+                    sql = "insert into privilegioutilizador (idUtilizador, idPrivilegio) values (?, 2)";
+                    statement = objCon.conn.prepareStatement(sql);
+                    statement.setInt(1, idUtilizador);
+                    statement.executeUpdate();
+                }
+                
+                // E informará o número de linhas que foram alteradas na tabela com a atualização. 
+                //Se não houver atualização, retorna 0, se houver, retorna o numero de linhas alteradas com a inserção de um novo dado
                 JOptionPane.showMessageDialog(null, "Registado com sucesso!");
+            }
         }
         catch(Exception e){
             System.out.println(e);
@@ -139,6 +139,25 @@ public class LoginUtilizador {
             catch(Exception e){
             }
         }
+    }
+
+    private String getEncryptedPassword() throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        // conceder privilegio ao utilizador de acesso ao site:
+        //(insert into privilegioutilizador(idUtilizador, idPrivilegio) values(?, 1));
+        
+        //conceder privilegio ao utilizador de acesso ao sistema
+        //(insert into privilegioutilizador(idUtilizador, idPRivilegio) values(?, 2));
+        
+        //criptografia da senha
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte messageDigest[] = md.digest(pwd.getBytes("UTF-8"));
+        StringBuilder sb = new StringBuilder();
+        for(byte b : messageDigest){
+            
+            sb.append(String.format("02X", 0xFF & b));
+        }
+        String senhaHex = sb.toString();
+        return senhaHex;
     }
     
 }
