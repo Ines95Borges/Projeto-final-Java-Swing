@@ -15,8 +15,6 @@ public class Stock extends javax.swing.JFrame {
     this.getContentPane().setBackground(Color.BLACK);
     }
 
-    
-
     @SuppressWarnings("unchecked")
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {

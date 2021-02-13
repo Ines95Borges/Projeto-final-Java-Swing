@@ -52,7 +52,7 @@ public class Vendas {
       PreparedStatement pstm;
       ResultSet rs;
       
-      pstm = conn.conn.prepareStatement("SELECT id, nome FROM clientes;");
+      pstm = conn.conn.prepareStatement("SELECT id, nome FROM utilizador;");
       rs = pstm.executeQuery();
       
       while(rs.next()){

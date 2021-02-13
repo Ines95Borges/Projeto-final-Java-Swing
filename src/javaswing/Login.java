@@ -19,7 +19,7 @@ public class Login {
         boolean isUtilizadorFound = false;
         
         try{
-            PreparedStatement statement = objCon.conn.prepareStatement("select * from clientes where nome=? ");
+            PreparedStatement statement = objCon.conn.prepareStatement("select * from utilizador where nome=? ");
             statement.setString(1, nome);
             
             ResultSet resultSet = statement.executeQuery();
@@ -42,8 +42,11 @@ public class Login {
         objCon.abreConexao();
         boolean statusLogin = false;
         
+        
+        
+        
         try{
-            PreparedStatement ps = objCon.conn.prepareStatement("select * from clientes where nome=? and pwd=? ");
+            PreparedStatement ps = objCon.conn.prepareStatement("select * from utilizador where nome=? and pwd=? ");
             ps.setString(1, nome);
             ps.setString(2, pwd);
             ResultSet rs = ps.executeQuery();
@@ -68,7 +71,7 @@ public class Login {
     
         try{
             objCon.abreConexao();
-            PreparedStatement ps = objCon.conn.prepareStatement("insert into clientes (nome, pwd) values(?,?)");
+            PreparedStatement ps = objCon.conn.prepareStatement("insert into utilizador (nome, pwd) values(?,?)");
             ps.setString(1, nome);
             ps.setString(2, pwd);
             

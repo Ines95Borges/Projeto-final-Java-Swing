@@ -145,9 +145,10 @@ public class LoginForm extends javax.swing.JFrame {
       fazLogin.nome = utilizador;
       fazLogin.pwd = password;
 
-      if(fazLogin.isUtilizadorRegistado()){
-        this.dispose();
-
+      if(fazLogin.fazerLogin()){
+          
+          this.dispose();
+        
         MenuPrincipal x = new MenuPrincipal(); // Classe criada pelo Hugo
         x.setVisible(true);
         

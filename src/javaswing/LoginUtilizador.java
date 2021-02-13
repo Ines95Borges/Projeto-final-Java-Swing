@@ -20,7 +20,7 @@ public class LoginUtilizador {
         boolean isUtilizadorFound = false;
         
         try{
-            PreparedStatement statement = objCon.conn.prepareStatement("select * from clientes where nome=? ");
+            PreparedStatement statement = objCon.conn.prepareStatement("select * from utilizador where nome=? ");
             statement.setString(1, nome);
             
             ResultSet resultSet = statement.executeQuery();
@@ -43,10 +43,23 @@ public class LoginUtilizador {
         objCon.abreConexao();
         boolean statusLogin = false;
         
-        try{
-            PreparedStatement ps = objCon.conn.prepareStatement("select * from clientes where nome=? and pwd=? ");
+        try{            
+            String sql = "select * "
+                    + "from utilizador, privilegioutilizador "
+                    + "where nome=? and pwd=? "
+                    + "and utilizador.id = privilegioutilizador.idUtilizador "
+                    + "and privilegioutilizador.idPrivilegio = 2";
             
-             MessageDigest md = MessageDigest.getInstance("SHA-256");
+            /*
+            "select *"
+                    + "from utilizador, privilegioutilizador"
+                    + "where nome=? and pwd=?"
+                    + "and utilizador.id = privilegioutilizador.idUtilizador"
+                    + "and privilegioutilizador.idPrivilegio = 2";
+*/
+            PreparedStatement ps = objCon.conn.prepareStatement(sql);
+            
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte messageDigest[] = md.digest(pwd.getBytes("UTF-8"));
             
             StringBuilder sb = new StringBuilder();
@@ -86,8 +99,16 @@ public class LoginUtilizador {
     
         try{
             objCon.abreConexao();
-            PreparedStatement ps = objCon.conn.prepareStatement("insert into clientes (nome, pwd) values(?,?)");
             
+
+            PreparedStatement ps = objCon.conn.prepareStatement("insert into utilizador (nome, pwd) values(?,?)");
+             // query para as seguintes condições:
+             
+             // conceder privilegio ao utilizador de acesso ao site:
+             //(insert into privilegioutilizador(idUtilizador, idPrivilegio) values(?, 1));
+             
+             //conceder privilegio ao utilizador de acesso ao sistema
+            //(insert into privilegioutilizador(idUtilizador, idPRivilegio) values(?, 2));
             
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte messageDigest[] = md.digest(pwd.getBytes("UTF-8"));
